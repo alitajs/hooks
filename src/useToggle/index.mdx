@@ -1,0 +1,67 @@
+---
+name: useToggle
+route: /useToggle
+edit: false
+sidebar: true
+---
+
+import { Playground } from 'docz';
+import { Button, Card, Switch } from 'antd';
+import useToggle from './index';
+
+# useToggle
+
+React 状态钩子，用于追踪布尔型值。
+
+## 代码演示
+
+### 基本示例
+
+<Playground>
+{
+  () => {
+    const Demo = () => {
+      const [on, toggle] = useToggle();
+
+      return (
+        <Card>
+          <Switch
+            checked={on}
+            checkedChildren="开"
+            unCheckedChildren="关"
+          />
+          <br />
+          <br />
+          <Button.Group>
+            <Button onClick={() => toggle()}>切换</Button>
+            <Button onClick={() => toggle(true)}>设置打开</Button>
+            <Button onClick={() => toggle(false)}>设置关闭</Button>
+          </Button.Group>
+        </Card>
+      );
+    };
+
+    return <Demo />
+  }
+}
+</Playground>
+
+## API
+
+```
+const [on, toggle] = useToggle(params);
+
+params: boolean
+```
+
+## 结果
+
+|参数|説明|类型|
+|------ |--------------|---------------|
+|on|开关状态|`boolean`|
+|toggle|切换状态|`function`|
+
+## 参数
+|参数|説明|类型|默认值|
+|--- |------|-------|-------|
+|params|开关状态|`boolean`|--|

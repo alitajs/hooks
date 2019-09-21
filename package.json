@@ -1,0 +1,45 @@
+{
+  "name": "@alitajs/hooks",
+  "version": "0.0.1",
+  "description": "Awesome react hooks",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "repository": "git@github.com:alitajs/hooks.git",
+  "author": "wangxingkang <wang_xingkang@qq.com>",
+  "license": "MIT",
+  "keywords": [
+    "altajs hooks",
+    "react hooks"
+  ],
+  "scripts": {
+    "bootstrap": "yarn || npm i",
+    "start": "father doc dev",
+    "build": "father build",
+    "test": "father test",
+    "pub:doc": "father doc build && father doc deploy"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^2.0.1",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "antd": "^3.23.3",
+    "babel-plugin-import": "^1.12.1",
+    "father": "^2.18.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

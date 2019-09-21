@@ -1,0 +1,123 @@
+---
+name: useModal
+route: /useModal
+edit: false
+sidebar: true
+---
+
+import { Playground } from 'docz';
+import { Modal, Card, Button } from 'antd';
+import useModal from './index';
+
+# useModal
+
+简化`ant-design Modal`组件使用。
+
+## 代码演示
+
+### 基本使用
+
+<Playground>
+{
+  () => {
+    const LoginModal = (props) => {
+      const { visible, closeModal } = props;
+
+      return (
+        <Modal
+          title="Basic Modal"
+          visible={visible}
+          onOK={closeModal}
+          onCancel={closeModal}
+        >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Modal>
+      )
+    }
+
+    const LoginPage = () => {
+      const loginModal = useModal();
+
+      return (
+        <Card>
+          <Button type="primary" onClick={() => { loginModal.openModal() }}>
+            Login
+          </Button>
+
+          <LoginModal {...loginModal} />
+        </Card>
+      )
+    }
+
+    return <LoginPage />
+  }
+}
+</Playground>
+
+### 设置初始值
+
+<Playground>
+{
+  () => {
+    const LoginModal = (props) => {
+      const { visible, closeModal, initValue = {} } = props;
+
+      return (
+        <Modal
+          title="Basic Modal"
+          visible={visible}
+          onOK={closeModal}
+          onCancel={closeModal}
+        >
+          <p>{initValue.name}</p>
+        </Modal>
+      )
+    }
+
+    const LoginPage = () => {
+      const loginModal = useModal();
+
+      return (
+        <Card>
+          <Button
+            type="primary"
+            onClick={() => {
+              loginModal.openModal({
+                name: 'Tom'
+              })
+            }}
+          >
+            Login
+          </Button>
+
+          <LoginModal {...loginModal} />
+        </Card>
+      )
+    }
+
+    return <LoginPage />
+  }
+}
+</Playground>
+
+
+## API
+
+```
+const { visible, initValue, openModal, closeModal } = useControlledValue(params);
+```
+
+## 结果
+
+|参数|説明|类型|
+|------ |--------------|---------------|
+|visible|控制Modal显示隐藏|`boolean`|
+|initValue|需要传入的值|`any`|
+|openModal|打开Modal的方法|`function`|
+|closeModal|关闭Modal的方法|`function`|
+
+## 参数
+
+无
