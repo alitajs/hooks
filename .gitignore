@@ -1,3 +1,5 @@
 node_modules
 .docz
 .doc
+.idea
+yarn-error.log

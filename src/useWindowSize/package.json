@@ -1,0 +1,36 @@
+{
+  "name": "@alitajs/hooks",
+  "version": "1.0.1",
+  "description": "React hook for subscribing to window size",
+  "main": "index.ts",
+  "repository": "git@github.com:alitajs/hooks.git",
+  "author": "panxiaoliang <243506597@qq.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "window",
+    "browser",
+    "size"
+  ],
+  "files": [
+    "index.*"
+  ],
+  "scripts": {
+    "example": "parcel example.html"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "browser-env": "^3.2.5",
+    "parcel": "^1.10.3",
+    "raf": "^3.4.0",
+    "react-dom": "^16.7.0-alpha.0",
+    "react-test-renderer": "^16.7.0-alpha.0"
+  }
+}
