@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {debounce} from 'lodash';
+import debounce from 'lodash/debounce';
 
 
 export interface IWindowSize {
