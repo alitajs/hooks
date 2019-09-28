@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import useWindowWidth from './index.ts';
+import useWindowWidth from './index.tsx';
 
 function App() {
   let windowWidth = useWindowWidth();
