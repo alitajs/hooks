@@ -24,19 +24,16 @@ React 状态钩子，用户动态获取 窗口 resize 后的值。
     const Demo = () => {
       const windowSize = useWindowSize();
 
-      const renderDetail = useMemo( () => {
-
+      const renderDetail = useMemo(() => {
         const {interHeight, innerWidth, outerHeight, outerWidth} = windowSize;
-        return (<Fragment>
-
-         <Descriptions bordered title="窗口resize动态变化">
-           <Descriptions.Item label="innerHeight">{innerHeight}</Descriptions.Item>
-           <Descriptions.Item label="innerWidth">{innerWidth}</Descriptions.Item>
-           <Descriptions.Item label="outerHeight">{outerHeight}</Descriptions.Item>
-           <Descriptions.Item label="outerWidth">{outerWidth}</Descriptions.Item>
-          </Descriptions>
-        </Fragment>)
-      }, [windowSize])
+        return (
+          <Fragment>
+            <Descriptions bordered title="窗口resize动态变化">
+              <Descriptions.Item label="height">{windowSize.height}</Descriptions.Item>
+              <Descriptions.Item label="width">{windowSize.width}</Descriptions.Item>
+            </Descriptions>
+          </Fragment>
+        )}, [windowSize])
 
       return (
         <Card>
@@ -62,7 +59,7 @@ params: { waitTime?: number}
 
 |参数|説明|类型|
 |------ |--------------|---------------|
-|windowSize|窗口大小数据|{innerHeight: number,innerWidth: number,outerHeight: number: number}|
+|windowSize|窗口大小数据|{ height: number,width: number }|
 
 
 ## 参数
