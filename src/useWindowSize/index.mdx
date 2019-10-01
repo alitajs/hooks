@@ -29,8 +29,12 @@ React 状态钩子，用户动态获取 窗口 resize 后的值。
         return (
           <Fragment>
             <Descriptions bordered title="窗口resize动态变化">
-              <Descriptions.Item label="height">{windowSize.height}</Descriptions.Item>
-              <Descriptions.Item label="width">{windowSize.width}</Descriptions.Item>
+              <Descriptions.Item label="height">
+                {windowSize.height}
+              </Descriptions.Item>
+              <Descriptions.Item label="width">
+                {windowSize.width}
+              </Descriptions.Item>
             </Descriptions>
           </Fragment>
         )}, [windowSize])
@@ -50,9 +54,9 @@ React 状态钩子，用户动态获取 窗口 resize 后的值。
 ## API
 
 ```
-const windowSize = useWindowSize({waitTime: 500});
+const windowSize = useWindowSize({ waitTime: 500 });
 
-params: { waitTime?: number}
+params: { waitTime?: number }
 ```
 
 ## 结果
