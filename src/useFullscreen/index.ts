@@ -1,4 +1,9 @@
-import { RefObject, useLayoutEffect, useEffect, useState } from 'react';
+import {
+  RefObject,
+  useLayoutEffect,
+  useEffect,
+  useState
+} from 'react';
 import screenFull from 'screenfull';
 
 export interface FullScreenOptions {
