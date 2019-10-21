@@ -1,0 +1,62 @@
+---
+name: useLocalStorage
+route: /useLocalStorage
+edit: false
+sidebar: true
+---
+
+import { Playground } from 'docz';
+import { Card, Button, Input } from 'antd';
+import useLocalStorage from './index';
+
+# useLocalStorage
+
+存储值到`localStorage`
+
+## 代码演示
+
+### 基本使用
+
+<Playground>
+{
+  () => {
+    const [message, setMessage] = useLocalStorage('user-message', 'Hello World',)
+    return (
+      <div>
+        <p>刷新页面后，可以看到输入框中的内容被从 localStorage 中恢复了。</p>
+        <Input
+          value={message}
+          onChange={e => {
+            setMessage(e.target.value)
+          }}
+          placeholder="请输入文字"
+          style={{ width: 200, marginRight: 16 }}
+        />
+        <Button
+          onClick={() => {
+            setMessage()
+          }}
+        >删除</Button>
+      </div>
+    )
+  }
+}
+</Playground>
+
+## API
+
+```
+const [state, setState] = useLocalStorage(key, initialValue, raw);
+```
+
+## 结果
+
+|参数|説明|类型|
+|------ |--------------|---------------|
+|key|存储的key|`string`|
+|initialValue|初始存入的值|`any`|
+|raw|尝试对存储的值进行JSON序列化|`boolean`|
+
+## 参数
+
+无
