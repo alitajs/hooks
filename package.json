@@ -1,6 +1,6 @@
 {
   "name": "@alitajs/hooks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Awesome react hooks",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
