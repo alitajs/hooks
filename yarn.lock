@@ -16724,6 +16724,11 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
+screenfull@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-5.0.0.tgz#5c2010c0e84fd4157bf852877698f90b8cbe96f6"
+  integrity sha512-yShzhaIoE9OtOhWVyBBffA6V98CDCoyHTsp8228blmqYy1Z5bddzE/4FPiJKlr8DVR4VBiiUyfPzIQPIYDkeMA==
+
 scrollama@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/scrollama/-/scrollama-2.1.0.tgz#aa4252eb24c361ca536d7f3aeb16bdb10cf319ba"

@@ -1,0 +1,78 @@
+---
+name: useFullScreen
+route: /useFullScreen
+edit: false
+sidebar: true
+---
+
+import { Playground } from 'docz';
+import { Card, Button } from 'antd';
+import useFullScreen from './index';
+import useToggle from '../useToggle/index';
+
+# useModal
+
+全屏Hooks
+
+## 代码演示
+
+### 基本使用
+
+<Playground>
+{
+  () => {
+    const ref = React.useRef(null);
+    const [show, toggle] = useToggle(false);
+    const isFullScreen = useFullScreen(ref, show);
+
+    return (
+      <div ref={ref}>
+        <Card style={{ height: '100%' }}>
+          <Button onClick={() => toggle()}>切换全屏</Button>
+        </Card>
+      </div>
+    )
+  }
+}
+</Playground>
+
+### 整个页面全屏
+
+<Playground>
+{
+  () => {
+    const ref = React.useRef(null);
+    const [show, toggle] = useToggle(false);
+    const isFullScreen = useFullScreen(null, show);
+
+    return (
+      <div ref={ref}>
+        <Card style={{ height: '100%' }}>
+          <Button onClick={() => toggle()}>切换全屏</Button>
+        </Card>
+      </div>
+    )
+  }
+}
+</Playground>
+
+## API
+
+```
+const isFullScreen = useFullScreen(ref, on, options);
+
+```
+
+## 结果
+
+|参数|説明|类型|
+|------ |--------------|---------------|
+|isFullScreen|是否全屏|`boolean`|
+
+## 参数
+
+## 参数
+|参数|説明|类型|默认值|
+|--- |------|-------|-------|
+|ref| 需要全屏Dom的ref |`RefObject<Element>`|`document.documentElement`|
+|on| 全屏开关 |`boolean`|`false`|
